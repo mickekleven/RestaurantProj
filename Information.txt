@@ -1,0 +1,11 @@
+﻿
+Klasser
+- People 
+_ Employee
+
+Borde ha lagt upp en salary klass också vilket jag är medveten om
+
+Methoder i program.cs
+
+
+

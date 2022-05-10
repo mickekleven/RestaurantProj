@@ -10,7 +10,7 @@ namespace RestaurantProj
 
         /// <summary>
         /// Main entrance. Quick and dirty. 
-        /// I know, to many responsibilities but it works for now
+        /// I know, to many responsibilities
         /// </summary>
         static void Main()
         {
@@ -35,8 +35,11 @@ namespace RestaurantProj
                 Console.Write("Anställd - Ange lön (Endast numeriska värden) : ");
                 var salary = Console.ReadLine();
 
-                var test = int.TryParse(salary, out _salary);
-
+                while (!int.TryParse(salary, out _salary))
+                {
+                    Console.Write("OBS! Felaktigt format - Ange lön (Endast numeriska värden) : ");
+                    salary = Console.ReadLine();
+                }
 
                 if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName) && int.TryParse(salary, out _salary))
                 {
@@ -102,6 +105,7 @@ namespace RestaurantProj
                 Console.WriteLine($"FirstName: {empData.FirstName} | FirstName: {empData.LastName} | Salary: {empData.Salary} sek");
             }
         }
+
     }
 }
 
