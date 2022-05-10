@@ -90,7 +90,7 @@ namespace RestaurantProj
         {
             List<Employee> _tempCollection = new();
 
-            if (string.IsNullOrEmpty(_empInfo))
+            if (!string.IsNullOrEmpty(_empInfo))
             {
                 _tempCollection = employees.Where(e => e.LastName.ToLower().Contains(_empInfo) ||
                                        e.LastName.ToLower().Contains(_empInfo)).ToList();
