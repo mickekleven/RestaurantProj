@@ -8,7 +8,6 @@ namespace RestaurantProj
     {
         private static List<Employee> employees = new();
 
-
         /// <summary>
         /// Main entrance. Quick and dirty. 
         /// I know, to many responsibilities but it works for now
@@ -35,6 +34,8 @@ namespace RestaurantProj
 
                 Console.Write("Anställd - Ange lön (Endast numeriska värden) : ");
                 var salary = Console.ReadLine();
+
+                var test = int.TryParse(salary, out _salary);
 
 
                 if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName) && int.TryParse(salary, out _salary))
